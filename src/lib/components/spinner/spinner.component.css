@@ -1,0 +1,68 @@
+/* :host {
+    width: 15px;
+    height: 15px;
+    max-width: 15px;
+    max-height: 15px;
+} */
+
+.wmessage {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(var(--textRGB), 0.05);
+    border: .5px solid rgba(var(--textRGB),0.1);
+}
+
+svg {
+    animation: spin 1s steps(10, start) infinite;
+    will-change: transform;
+    width: 15px;
+    height: 15px;
+}
+
+.cls-2 {
+    fill: rgba(var(--textRGB), 0.9);
+}
+
+.cls-3 {
+    fill: rgba(var(--textRGB), 0.8);
+}
+
+.cls-4 {
+    fill: rgba(var(--textRGB), 0.7);
+}
+
+.cls-5 {
+    fill: rgba(var(--textRGB), 0.6);
+}
+
+.cls-6 {
+    fill: rgba(var(--textRGB), 0.5);
+}
+
+.cls-7 {
+    fill: rgba(var(--textRGB), 0.4);
+}
+
+.cls-8 {
+    fill: rgba(var(--textRGB), 0.3);
+}
+
+.cls-9 {
+    fill: rgba(var(--textRGB), 0.2);
+}
+
+.cls-10 {
+    fill: rgba(var(--textRGB), 0.1);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

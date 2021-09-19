@@ -1,0 +1,8 @@
+<div class="flex-row cont" [ngClass]="{'pad': icon.length < 1}" style="border-radius: 5px;">
+    <div *ngIf="icon.length > 0" class="flex-perfect-center" style="padding: 5px 10px;">
+        <span class="icon" style="margin: 0px 10px;">{{ icon }}</span>
+    </div>
+    <span class="content" style="margin: 5px 0px;">
+        <ng-content></ng-content>
+    </span>
+</div>

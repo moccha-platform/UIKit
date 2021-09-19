@@ -1,0 +1,69 @@
+.switch {
+    background: rgba(var(--textRGB),0.2);
+    width: 45px;
+    height: fit-content;
+    border-radius: 100px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease-in-out 150ms;
+    box-shadow: inset 0px 0px 10px 3px rgba(var(--backgroundRGB), 0.1);
+}
+
+.enabled {
+    background: var(--valid);
+}
+
+.slider {
+    background: rgb(var(--backgroundRGB));
+    position: relative;
+    width: 20px;
+    margin: 3px;
+    height: 20px;
+    left: 0%;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 3px 0px rgba(var(--backgroundRGB),0.3); */
+    box-shadow: 0px 0px 10px 0px rgba(var(--backgroundRGB), 0);
+    transition: transform ease-in-out 150ms;
+    -webkit-transition: transform ease-in-out 150ms;
+    transition-delay: 0ms;
+    z-index: 2;
+    will-change: transform;
+}
+
+.on {
+    -webkit-transform: translateX(95%);
+    transform: translateX(95%);
+    background: white;
+    box-shadow: 0px 0px 10px 0px rgba(var(--backgroundRGB), 0.5);
+}
+
+.activeIcon, .inactiveIcon {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 8pt;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+    /*
+    * FIXME:
+    * Safari en iOS 14.7 muestra el icono un poco desalineado verticalmente, 0,2px hacia arriba aproximadamente.
+    * Chrome en macOS lo muestra perfectamente.
+    * El ajuste óptico perfecto es 0.3px. Se deja en 0.5px, pero en escritorio se ve un poco de espaciado superior.
+    */
+    top: calc(50% + 0.5px);
+}
+
+.activeIcon {
+    left: 7px;
+}
+.inactiveIcon {
+    right: 7px;
+    color: rgba(var(--backgroundRGB),1)
+}
+
+.icon {
+    opacity: 0.5;
+}

@@ -1,0 +1,5 @@
+<div class="switch" [ngClass]="{enabled: enabled==true}" (click)="enabledChange.emit(!enabled)">
+    <div class="slider" [ngClass]="{on: enabled==true}"></div>
+    <label *ngIf="inactiveIcon" class="icon inactiveIcon">{{inactiveIcon}}</label>
+    <label *ngIf="activeIcon" class="icon activeIcon">{{activeIcon}}</label>
+</div>

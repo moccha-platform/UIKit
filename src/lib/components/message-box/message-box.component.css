@@ -1,0 +1,36 @@
+:host-context(.warning) .cont {
+    border-color: var(--warning);
+    background: rgba(var(--warningRGB), 0.2);
+    color: var(--warning) !important;
+}
+:host-context(.done) .cont {
+    border-color: var(--valid);
+    background: rgba(var(--validRGB), 0.2);
+    color: var(--valid) !important;
+}
+:host-context(.error) .cont {
+    border-color: var(--error);
+    background: rgba(var(--errorRGB), 0.2);
+    color: var(--error) !important
+}
+:host-context(.active) .cont {
+    border-color: var(--accent);
+    background: rgba(var(--accentRGB), 0.2);
+    color: var(--accent) !important
+}
+
+.cont {
+    padding: 0px 10px 0px 0px;
+    border: 1px solid rgba(var(--textRGB),0.2);
+    background: rgba(var(--textRGB),0.05);
+    color: rgba(var(--textRGB),0.5);
+}
+
+.content {
+    font-weight: 400;
+    font-size: 9pt;
+}
+
+.pad {
+    padding: 0px 10px !important;
+}
